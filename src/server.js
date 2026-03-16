@@ -3,6 +3,8 @@ require("dotenv").config();
 const express = require("express");
 const authRoutes = require("./routes/authRoutes");
 const jobRoutes = require("./routes/jobRoutes");
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./config/swagger");
 
 const app = express();
 
@@ -13,6 +15,8 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 
 app.use("/jobs", jobRoutes);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.get("/", (req, res) => {
   res.send("Job Tracker API running");
