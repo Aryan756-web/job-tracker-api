@@ -1,6 +1,23 @@
 # Job Application Tracker API
 
-A RESTful backend API for managing job applications with authentication and CRUD operations.
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green)
+![Express](https://img.shields.io/badge/Express.js-Framework-black)
+
+# Job Tracker API
+
+A RESTful backend API for tracking job applications.  
+Users can register, login, and manage their job applications securely using JWT authentication.
+
+Built with Node.js, Express, and MongoDB, and deployed on Render with interactive API documentation using Swagger.
+
+## 🌐 Live API
+
+Base URL  
+https://job-tracker-api-yp4q.onrender.com
+
+API Documentation (Swagger)  
+https://job-tracker-api-yp4q.onrender.com/api-docs
 
 ## Tech Stack
 
@@ -46,6 +63,30 @@ POST /auth/register
 "email": "aryan@test.com",
 "password": "12345678"
 }
+
+## 📁 Project Structure
+
+src/
+config/
+db.js
+swagger.js
+
+controllers/
+authController.js
+jobController.js
+
+middleware/
+authMiddleware.js
+
+models/
+User.js
+Job.js
+
+routes/
+authRoutes.js
+jobRoutes.js
+
+server.js
 
 ## Installation
 
