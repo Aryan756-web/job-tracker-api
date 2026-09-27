@@ -10,7 +10,7 @@ const options = {
     },
     servers: [
       {
-        url: "https://job-tracker-api-yp4q.onrender.com",
+        url: process.env.API_URL || "http://localhost:5000",
       },
     ],
     components: {
